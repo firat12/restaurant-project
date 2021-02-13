@@ -1,0 +1,23 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Personel Count</th>
+      <th scope="col">Email</th>
+      <th scope="col">Address</th>
+      <th scope="col">Operations</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of collection; let i=index">
+      <th>{{i}}</th>
+      <td>{{item.name}}</td>
+      <td>{{item.personelCount}}</td>
+      <td>{{item.email}}</td>
+      <td>{{item.address}}</td>
+      <td><i (click)="deleteResto(item.id)" class="fa fa-trash" style="font-size:20px;color:red;"></i>
+      </td>
+    </tr>
+  </tbody>
+</table>
